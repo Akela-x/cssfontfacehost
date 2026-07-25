@@ -10,7 +10,7 @@ const api = {
     version.init();
     switch (version.console) {
       case 4:
-        importScripts("ps4/constants.js", "ps4/userland.js");
+        importScripts("constants.js", "userland.js");
         break;
       case 5:
         //TODO

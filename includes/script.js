@@ -43,23 +43,23 @@ function stopInterval(){
         clearInterval(timerId);
         timerId = null;
     }
-    label.textContent = "Auto Jailbreak";
+    label.textContent = "Автозапуск";
 }
 
 function jailbreakCountdown() {   
     stopInterval();
 
     let countdown = 5;
-    label.textContent = `Auto Jailbreaking in: ${countdown}`;
+    label.textContent = `Взлом через: ${countdown}`;
     timerId = setInterval(() => {
         countdown--;
-        label.textContent = `Auto Jailbreaking in: ${countdown}`;
+        label.textContent = `Взлом через: ${countdown}`;
 
         if (countdown < 0) {
             jeilbrekBtn.disabled = true; 
             clearInterval(timerId);
             timerId = null;
-            label.textContent = 'Executing';
+            label.textContent = 'Выполнение';
             doJb();
         }
     }, 1000);
